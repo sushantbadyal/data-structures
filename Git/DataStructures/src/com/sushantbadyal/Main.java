@@ -3,6 +3,7 @@ package com.sushantbadyal;
 import com.java.src.sorting.BubbleSort;
 import com.java.src.sorting.InsertionSort;
 import com.java.src.sorting.MergeSort;
+import com.java.src.sorting.QuickSort;
 
 import java.util.Scanner;
 
@@ -29,5 +30,7 @@ public class Main {
         Util.iterateArrayToConsole(new InsertionSort().sort(valuesToSort.clone()));
         System.out.println("\nMerge Sort:");
         Util.iterateArrayToConsole(new MergeSort().sort(valuesToSort.clone()));
+        System.out.println("\nQuick Sort:");
+        Util.iterateArrayToConsole(new QuickSort().sort(valuesToSort.clone()));
     }
 }
