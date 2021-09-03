@@ -2,9 +2,8 @@ package com.sushantbadyal;
 
 import com.java.src.sorting.BubbleSort;
 import com.java.src.sorting.InsertionSort;
+import com.java.src.sorting.MergeSort;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -19,14 +18,16 @@ public class Main {
                 valuesToSort[i] = Integer.parseInt(inputArr[i]);
             }
             catch (NumberFormatException e){
-                System.out.println("ERROR: "+e.getMessage());
+                System.out.println("Warning: "+e.getMessage());
                 //todo: avoid continue for last iteration
                 continue;
             }
         }
         System.out.println("Bubble Sort:");
-        Util.iterateArrayToConsole(new BubbleSort().sort(valuesToSort));
+        Util.iterateArrayToConsole(new BubbleSort().sort(valuesToSort.clone()));
         System.out.println("\nInsertion Sort:");
-        Util.iterateArrayToConsole(new InsertionSort().sort(valuesToSort));
+        Util.iterateArrayToConsole(new InsertionSort().sort(valuesToSort.clone()));
+        System.out.println("\nMerge Sort:");
+        Util.iterateArrayToConsole(new MergeSort().sort(valuesToSort.clone()));
     }
 }
